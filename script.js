@@ -173,10 +173,11 @@ function validateContactForm() {
     if (errors.length > 0) {
         // If errors exist, show them in alert box
         alert('Please fix these errors:\n\n' + errors.join('\n'));
+        console.log('Validation errors:', errors);
         return false; // Prevent form submission
     } else {
-        // If no errors, show success message
-        alert('✅ Form submitted successfully!\n\nThank you for your message!');
+        // If no errors, show success message and allow submission
+        console.log('Form validation passed - submitting to Formspree');
         return true; // Allow form submission
     }
 }
@@ -279,6 +280,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // If form is invalid, prevent submission
             if (!isValid) {
                 e.preventDefault(); // Stop form from submitting
+                console.log('Form validation failed - submission prevented');
+            } else {
+                console.log('Form validation passed - allowing submission to Formspree');
+                // Let the form submit normally to Formspree
             }
         });
     }
