@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Practice</title>
+    <link rel="stylesheet" href="css/box-model.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .demo-section {
+            margin: 40px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+        }
+        .comparison {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>📦 CSS Box Model Practice</h1>
+    
+    <!-- Box Model Demo -->
+    <div class="demo-section">
+        <h2>Complete Box Model Demo</h2>
+        <div class="box-model-demo">
+            This is content with padding, border, and margin!
+        </div>
+        <p>Yellow = Content | Blue = Border | Gray = Background | White space = Margin</p>
+    </div>
+    
+    <!-- Layer by Layer Comparison -->
+    <div class="demo-section">
+        <h2>Box Model Layers Comparison</h2>
+        <div class="comparison">
+            <div class="content-only">Content Only</div>
+            <div class="with-padding">+ Padding</div>
+            <div class="with-border">+ Border</div>
+            <div class="with-margin">+ Margin</div>
+        </div>
+    </div>
+    
+    <!-- Box-sizing Comparison -->
+    <div class="demo-section">
+        <h2>Box-sizing: border-box Magic!</h2>
+        <div class="comparison">
+            <div class="normal-box">
+                Normal Box (content-box)<br>
+                Width: 300px + 40px padding + 10px border = 350px total!
+            </div>
+            <div class="border-box">
+                Border Box (border-box)<br>
+                Total Width: 300px (includes padding + border)
+            </div>
+        </div>
+    </div>
+    
+    <!-- Card Practice -->
+    <div class="demo-section">
+        <h2>Professional Cards with Box Model</h2>
+        <div class="comparison">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Profile Card</h3>
+                </div>
+                <div class="card-body">
+                    <p>This is a professional card using proper box model spacing.</p>
+                </div>
+                <div class="card-footer">
+                    <button>Learn More</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3>Service Card</h3>
+                </div>
+                <div class="card-body">
+                    <p>Another card with same structure but different content.</p>
+                </div>
+                <div class="card-footer">
+                    <button>Get Started</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Spacing Practice -->
+    <div class="demo-section">
+        <h2>Spacing Practice</h2>
+        <div class="comparison">
+            <div class="tight-spacing">Tight</div>
+            <div class="medium-spacing">Medium</div>
+            <div class="loose-spacing">Loose</div>
+        </div>
+    </div>
+</body>
+</html>

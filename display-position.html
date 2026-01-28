@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display & Position Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .demo-section {
+            margin: 40px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        /* Display Examples */
+        .block-example {
+            display: block;
+            background: #ff6b6b;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        
+        .inline-example {
+            display: inline;
+            background: #4ecdc4;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        
+        .inline-block-example {
+            display: inline-block;
+            background: #45b7d1;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            width: 150px;
+        }
+        
+        .none-example {
+            display: none;
+            background: #f39c12;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        
+        /* Position Examples */
+        .position-container {
+            position: relative;
+            height: 300px;
+            background: #ecf0f1;
+            border: 2px solid #bdc3c7;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .static-box {
+            position: static;
+            background: #e74c3c;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            width: 100px;
+            text-align: center;
+        }
+        
+        .relative-box {
+            position: relative;
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            width: 100px;
+            text-align: center;
+            top: 20px;
+            left: 20px;
+        }
+        
+        .absolute-box {
+            position: absolute;
+            background: #2ecc71;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            width: 100px;
+            text-align: center;
+            top: 50px;
+            right: 20px;
+        }
+        
+        .fixed-box {
+            position: fixed;
+            background: #9b59b6;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            width: 150px;
+            text-align: center;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .sticky-box {
+            position: sticky;
+            background: #f39c12;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+            top: 10px;
+            margin: 20px 0;
+        }
+        
+        /* Navigation Bar */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 100;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        /* Content for sticky demo */
+        .content-box {
+            background: #e8f4f8;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎮 Display & Position - Play with Code!</h1>
+    
+    <!-- Display Property Demo -->
+    <div class="demo-section">
+        <h2>📦 Display Property Examples</h2>
+        
+        <h3>Block Display (Full Width)</h3>
+        <div class="block-example">Block Element 1</div>
+        <div class="block-example">Block Element 2</div>
+        <p><strong>Block:</strong> Takes full width, elements stack vertically</p>
+        
+        <h3>Inline Display (Side by Side)</h3>
+        <span class="inline-example">Inline 1</span>
+        <span class="inline-example">Inline 2</span>
+        <span class="inline-example">Inline 3</span>
+        <p><strong>Inline:</strong> Takes only needed space, elements flow horizontally</p>
+        
+        <h3>Inline-Block Display (Best of Both)</h3>
+        <div class="inline-block-example">Inline-Block 1</div>
+        <div class="inline-block-example">Inline-Block 2</div>
+        <div class="inline-block-example">Inline-Block 3</div>
+        <p><strong>Inline-Block:</strong> Side by side BUT can set width/height</p>
+        
+        <h3>None Display (Hidden)</h3>
+        <div class="block-example">Visible Element</div>
+        <div class="none-example">This is hidden! (display: none)</div>
+        <div class="block-example">Another Visible Element</div>
+        <p><strong>None:</strong> Element completely disappears</p>
+    </div>
+    
+    <!-- Position Property Demo -->
+    <div class="demo-section">
+        <h2>🎯 Position Property Examples</h2>
+        
+        <div class="position-container">
+            <div class="static-box">Static</div>
+            <div class="relative-box">Relative</div>
+            <div class="absolute-box">Absolute</div>
+        </div>
+        
+        <p><strong>Static:</strong> Normal flow (default)</p>
+        <p><strong>Relative:</strong> Moved from original position but space remains</p>
+        <p><strong>Absolute:</strong> Positioned relative to nearest positioned parent</p>
+        
+        <div class="fixed-box">Fixed Box (Always Visible)</div>
+        <p><strong>Fixed:</strong> Stays in same place even when scrolling</p>
+    </div>
+    
+    <!-- Sticky Navigation Demo -->
+    <div class="demo-section">
+        <h2>📌 Sticky Navigation Bar</h2>
+        
+        <div class="sticky-nav">
+            <div class="nav-links">
+                <a href="#home">🏠 Home</a>
+                <a href="#about">👤 About</a>
+                <a href="#services">💼 Services</a>
+                <a href="#contact">📧 Contact</a>
+            </div>
+        </div>
+        
+        <div class="content-box">
+            <h3>Scroll Down to See Sticky Navigation!</h3>
+            <p>The navigation bar will stick to the top when you scroll past it.</p>
+        </div>
+        
+        <div class="content-box">
+            <h3>Content Section 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        
+        <div class="content-box">
+            <h3>Content Section 2</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        
+        <div class="content-box">
+            <h3>Content Section 3</h3>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+        
+        <div class="content-box">
+            <h3>Content Section 4</h3>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        
+        <div class="content-box">
+            <h3>Content Section 5</h3>
+            <p>Keep scrolling to see how the navigation stays at the top!</p>
+        </div>
+        
+        <div class="sticky-box">
+            📌 This is also sticky! It stays visible when scrolling.
+        </div>
+        
+        <div class="content-box">
+            <h3>Final Section</h3>
+            <p>Now you understand how position: sticky works!</p>
+        </div>
+    </div>
+    
+    <!-- Interactive Practice -->
+    <div class="demo-section">
+        <h2>🎮 Your Turn to Play!</h2>
+        <p>Try changing the CSS values and see what happens!</p>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
+            <h3>Experiment Code:</h3>
+            <code style="background: #e9ecef; padding: 5px; border-radius: 3px;">
+                .my-element {<br>
+                &nbsp;&nbsp;display: inline-block;<br>
+                &nbsp;&nbsp;position: relative;<br>
+                &nbsp;&nbsp;top: 10px;<br>
+                &nbsp;&nbsp;left: 20px;<br>
+                }
+            </code>
+        </div>
+    </div>
+</body>
+</html>

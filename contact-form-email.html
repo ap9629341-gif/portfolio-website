@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form with Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background: #3b82f6;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #2563eb;
+        }
+        .success {
+            background: #10b981;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .error {
+            background: #ef4444;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>📧 Contact Form with Email Notifications</h1>
+    
+    <h2>Step 1: Get Formspree Account</h2>
+    <p>1. Go to <a href="https://formspree.io" target="_blank">formspree.io</a></p>
+    <p>2. Sign up for free account</p>
+    <p>3. Create new form</p>
+    <p>4. Get your form endpoint URL</p>
+    
+    <h2>Step 2: Update Form Action</h2>
+    <p>Replace "YOUR_FORMSPREE_ENDPOINT" with your actual URL from Formspree</p>
+    
+    <!-- This form will send emails to your Formspree account -->
+    <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" 
+          method="POST" 
+          id="contactForm">
+        
+        <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        
+        <button type="submit">Send Message</button>
+    </form>
+    
+    <div id="result"></div>
+    
+    <script>
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const resultDiv = document.getElementById('result');
+            
+            // Show loading message
+            resultDiv.innerHTML = '<div class="success">Sending message...</div>';
+            
+            // Submit form using fetch
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    resultDiv.innerHTML = '<div class="success">✅ Message sent successfully! I\'ll get back to you soon.</div>';
+                    form.reset();
+                } else {
+                    resultDiv.innerHTML = '<div class="error">❌ Error sending message. Please try again.</div>';
+                }
+            })
+            .catch(error => {
+                resultDiv.innerHTML = '<div class="error">❌ Error sending message. Please try again.</div>';
+            });
+        });
+    </script>
+    
+    <h2>📋 Instructions:</h2>
+    <ol>
+        <li><strong>Sign up for Formspree:</strong> Go to formspree.io and create account</li>
+        <li><strong>Create Form:</strong> Click "New Form" and enter your email</li>
+        <li><strong>Get Endpoint:</strong> Copy the form URL (looks like: https://formspree.io/f/abc123)</li>
+        <li><strong>Update HTML:</strong> Replace "YOUR_FORMSPREE_ENDPOINT" with your URL</li>
+        <li><strong>Test Form:</strong> Fill out form and submit - you'll get email!</li>
+    </ol>
+    
+    <h2>🎯 Benefits:</h2>
+    <ul>
+        <li>✅ Free for up to 50 submissions/month</li>
+        <li>✅ No server needed</li>
+        <li>✅ Spam protection included</li>
+        <li>✅ Professional email notifications</li>
+        <li>✅ Easy setup</li>
+    </ul>
+</body>
+</html>

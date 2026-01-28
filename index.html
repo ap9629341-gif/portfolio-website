@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character Encoding - Bhasha samajhne ke liye -->
+    <meta charset="UTF-8">
+    
+    <!-- Mobile Responsive - Mobile pe sahi dikhne ke liye -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Description - Google ke liye description -->
+    <meta name="description" content="Adarsh Pal ka portfolio website - Web Developer from Netherlands">
+    
+    <!-- SEO Keywords - Google ko batane ke liye ki website kya hai -->
+    <meta name="keywords" content="portfolio, web developer, Adarsh Pal, Netherlands">
+    
+    <!-- Author Information - Banane wala kaun hai -->
+    <meta name="author" content="Adarsh Pal">
+    
+    <!-- Page Title - Browser tab mein dikhne wala naam -->
+    <title>Adarsh Pal | Web Developer Portfolio</title>
+    
+    <!-- Future CSS file link - Styling ke liye -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- JavaScript file link - Interactivity ke liye -->
+    <script src="script.js" defer></script>
+    
+    <!-- Inline JavaScript for learning -->
+    <script>
+        // 🎮 Your First JavaScript Code!
+        console.log('🌟 Hello, JavaScript World!');
+        console.log('🎯 I am a web developer!');
+        console.log('🚀 Let\'s learn coding!');
+        
+        // This is like writing in your magic notebook!
+        // Press F12 and click "Console" to see your messages!
+    </script>
+</head>
+<body>
+    <!-- Header Section - Website ka top part -->
+    <header>
+        <!-- Navigation Menu -->
+        <nav>
+            <div class="nav-container">
+                <div class="logo">Adarsh Pal</div>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+                <ul id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">My Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section - Website ka main attraction -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <!-- Main Heading - Most Important -->
+                <h1>Adarsh Pal</h1>
+                
+                <!-- Subheading - Secondary Information -->
+                <h2>Web Developer & Designer & Builder</h2>
+                
+                <!-- Description - More Detail -->
+                <p>Creating modern websites from Netherlands with passion and creativity</p>
+                
+                <!-- Call to Action Button -->
+                <a href="#contact" class="cta-button">Get In Touch</a>
+            </div>
+        </section>
+        
+        <!-- About Section Preview -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <!-- Section Heading -->
+                <h2>About Me</h2>
+                <p class="section-intro">I am a passionate web developer from Netherlands</p>
+                
+                <!-- About Content -->
+                <div class="about-content">
+                    <!-- About Text -->
+                    <div class="about-text">
+                        <h3>My Journey</h3>
+                        <p>
+                            I started learning web development because I love the internet. 
+                            I was curious about how websites are made and how they work. 
+                            Today I create beautiful and functional websites.
+                        </p>
+                        
+                        <h3>My Passion</h3>
+                        <p>
+                            I love writing clean code, creating modern designs, 
+                            and creating amazing experiences for users. 
+                            Every project gives me a chance to learn something new.
+                        </p>
+                        
+                        <!-- Call to Action -->
+                        <a href="#contact" class="secondary-button">Let's Work Together</a>
+                    </div>
+                    
+                    <!-- About Image Placeholder -->
+                    <div class="about-image">
+                        <div class="image-placeholder">
+                            <p>📷 Your Photo Here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <!-- Section Heading -->
+                <h2>Projects</h2>
+                <p class="section-intro">Some of my best projects that I have created</p>
+                
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+                    <!-- Project Card 1 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <p>🖥️ Project 1</p>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>E-Commerce Website</h3>
+                            <p>Modern e-commerce platform with payment integration</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">View Live</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project Card 2 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <p>📱 Project 2</p>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Portfolio Website</h3>
+                            <p>Responsive portfolio website with animations</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Tailwind</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">View Live</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project Card 3 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <p>🎮 Project 3</p>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Task Management App</h3>
+                            <p>Productivity app with drag and drop features</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">View Live</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <!-- Section Heading -->
+                <h2>My Services</h2>
+                <p class="section-intro">What services I provide</p>
+                
+                <!-- Services Grid -->
+                <div class="services-grid">
+                    <!-- Service Card 1 -->
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <span class="icon">🌐</span>
+                        </div>
+                        <div class="service-content">
+                            <h3>Web Development</h3>
+                            <p>I create custom websites with modern technologies. Responsive design and fast loading guaranteed.</p>
+                            <ul class="service-features">
+                                <li>Responsive Design</li>
+                                <li>Fast Loading</li>
+                                <li>SEO Friendly</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <!-- Service Card 2 -->
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <span class="icon">🎨</span>
+                        </div>
+                        <div class="service-content">
+                            <h3>UI/UX Design</h3>
+                            <p>I create beautiful and user-friendly designs. I follow modern design trends.</p>
+                            <ul class="service-features">
+                                <li>Modern Design</li>
+                                <li>User Research</li>
+                                <li>Prototype Testing</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <!-- Service Card 3 -->
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <span class="icon">📱</span>
+                        </div>
+                        <div class="service-content">
+                            <h3>Mobile Apps</h3>
+                            <p>I create progressive web apps and mobile-friendly solutions. Cross-platform compatibility.</p>
+                            <ul class="service-features">
+                                <li>PWA Development</li>
+                                <li>Mobile First</li>
+                                <li>App Store Ready</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <!-- Section Heading -->
+                <h2>Contact</h2>
+                <p class="section-intro">Fill the form below to contact me</p>
+                
+                <!-- Contact Form -->
+                <div class="contact-content">
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <form action="https://formspree.io/f/maqoglzd" method="POST" class="form">
+                            <!-- Name Field -->
+                            <div class="form-group">
+                                <label for="name">Your Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <!-- Email Field -->
+                            <div class="form-group">
+                                <label for="email">Your Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <!-- Subject Field -->
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            
+                            <!-- Message Field -->
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h3>Other Ways</h3>
+                        
+                        <!-- Email Info -->
+                        <div class="info-item">
+                            <span class="info-icon">📧</span>
+                            <div class="info-text">
+                                <h4>Email</h4>
+                                <p>adarsh.pal@example.com</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Phone Info -->
+                        <div class="info-item">
+                            <span class="info-icon">📱</span>
+                            <div class="info-text">
+                                <h4>Phone</h4>
+                                <p>+31 123 456 789</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Location Info -->
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <div class="info-text">
+                                <h4>Location</h4>
+                                <p>Netherlands</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Subscribe Section -->
+        <section id="subscribe" class="subscribe-section">
+            <div class="container">
+                <h2>Newsletter Subscribe</h2>
+                <p class="section-intro">Subscribe to get latest updates</p>
+                
+                <div class="subscribe-form">
+                    <form action="#" method="POST" class="form">
+                        <!-- Name Field -->
+                        <div class="form-group">
+                            <label for="first_name">First Name *</label>
+                            <input 
+                                type="text" 
+                                id="first_name" 
+                                name="first_name" 
+                                required 
+                                placeholder="First Name"
+                            >
+                        </div>
+                        
+                        <!-- Email Field for Newsletter -->
+                        <div class="form-group">
+                            <label for="subscribe-email">your email*</label>
+                            <input 
+                                type="email" 
+                                id="subscribe-email" 
+                                name="subscribe_email" 
+                                required 
+                                placeholder="your.email@example.com"
+                            >
+                        </div>
+                        
+                        <!-- Subscribe Button -->
+                        <button type="submit" class="subscribe-btn">
+                            📧 Get Updates
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navMenu').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
