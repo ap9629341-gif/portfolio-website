@@ -265,27 +265,30 @@ function clearErrorMessages() {
  * Add validation to contact form when page loads
  */
 document.addEventListener('DOMContentLoaded', function() {
+    // Temporarily disable form validation for testing
+    console.log('Form validation temporarily disabled for Formspree testing');
+    
     // Find contact form
     const contactForm = document.querySelector('.contact-form');
     
     if (contactForm) {
-        // Add submit event listener
-        contactForm.addEventListener('submit', function(e) {
-            // Clear previous error messages
-            clearErrorMessages();
-            
-            // Validate form
-            const isValid = validateContactForm();
-            
-            // If form is invalid, prevent submission
-            if (!isValid) {
-                e.preventDefault(); // Stop form from submitting
-                console.log('Form validation failed - submission prevented');
-            } else {
-                console.log('Form validation passed - allowing submission to Formspree');
-                // Let the form submit normally to Formspree
-            }
-        });
+        // Remove submit event listener for now
+        // contactForm.addEventListener('submit', function(e) {
+        //     // Clear previous error messages
+        //     clearErrorMessages();
+        //     
+        //     // Validate form
+        //     const isValid = validateContactForm();
+        //     
+        //     // If form is invalid, prevent submission
+        //     if (!isValid) {
+        //         e.preventDefault(); // Stop form from submitting
+        //         console.log('Form validation failed - submission prevented');
+        //     } else {
+        //         console.log('Form validation passed - allowing submission to Formspree');
+        //         // Let the form submit normally to Formspree
+        //     }
+        // });
     }
     
     // Find subscribe form
