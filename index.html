@@ -253,71 +253,109 @@
         <section id="contact" class="contact-section">
             <div class="container">
                 <!-- Section Heading -->
-                <h2>Contact</h2>
-                <p class="section-intro">Fill the form below to contact me</p>
+                <h2>Get In Touch</h2>
+                <p class="section-intro">Let's create something amazing together</p>
                 
-                <!-- Contact Form -->
+                <!-- Contact Content -->
                 <div class="contact-content">
                     <!-- Contact Form -->
-                    <div class="contact-form">
+                    <div class="contact-form-container">
+                        <div class="form-header">
+                            <h3>Send Me a Message</h3>
+                            <p>I'd love to hear from you! Fill out the form below and I'll get back to you as soon as possible.</p>
+                        </div>
+                        
                         <form action="https://formspree.io/f/maqoglzd" method="POST" class="form" id="contactForm" onsubmit="return true;">
-                            <!-- Name Field -->
-                            <div class="form-group">
-                                <label for="name">Your Name *</label>
-                                <input type="text" id="name" name="name" required>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Your Name *</label>
+                                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                                    <div class="form-icon">👤</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Your Email *</label>
+                                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                                    <div class="form-icon">📧</div>
+                                </div>
                             </div>
                             
-                            <!-- Email Field -->
-                            <div class="form-group">
-                                <label for="email">Your Email *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            
-                            <!-- Subject Field -->
                             <div class="form-group">
                                 <label for="subject">Subject *</label>
-                                <input type="text" id="subject" name="subject" required>
+                                <input type="text" id="subject" name="subject" required placeholder="Project Discussion">
+                                <div class="form-icon">📝</div>
                             </div>
                             
-                            <!-- Message Field -->
                             <div class="form-group">
                                 <label for="message">Message *</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project..."></textarea>
+                                <div class="form-icon">💬</div>
                             </div>
                             
-                            <!-- Submit Button -->
-                            <button type="submit" class="submit-btn">Send Message</button>
+                            <button type="submit" class="submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-icon">🚀</span>
+                            </button>
                         </form>
                     </div>
                     
                     <!-- Contact Info -->
                     <div class="contact-info">
-                        <h3>Other Ways</h3>
-                        
-                        <!-- Email Info -->
-                        <div class="info-item">
-                            <span class="info-icon">📧</span>
-                            <div class="info-text">
-                                <h4>Email</h4>
-                                <p>adarsh.pal@example.com</p>
-                            </div>
+                        <div class="info-header">
+                            <h3>Contact Information</h3>
+                            <p>Feel free to reach out through any of these channels</p>
                         </div>
                         
-                        <!-- Phone Info -->
-                        <div class="info-item">
-                            <span class="info-icon">📱</span>
-                            <div class="info-text">
-                                <h4>Phone</h4>
-                                <p>+31 123 456 789</p>
+                        <div class="info-items">
+                            <!-- Email Info -->
+                            <div class="info-item">
+                                <div class="info-icon-wrapper">
+                                    <span class="info-icon">📧</span>
+                                </div>
+                                <div class="info-text">
+                                    <h4>Email</h4>
+                                    <p>adarsh.pal@example.com</p>
+                                    <small>Response within 24 hours</small>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <!-- Location Info -->
-                        <div class="info-item">
-                            <span class="info-icon">📍</span>
-                            <div class="info-text">
-                                <h4>Location</h4>
-                                <p>Netherlands</p>
+                            
+                            <!-- Phone Info -->
+                            <div class="info-item">
+                                <div class="info-icon-wrapper">
+                                    <span class="info-icon">📱</span>
+                                </div>
+                                <div class="info-text">
+                                    <h4>Phone</h4>
+                                    <p>+31 123 456 789</p>
+                                    <small>Available for calls</small>
+                                </div>
+                            </div>
+                            
+                            <!-- Location Info -->
+                            <div class="info-item">
+                                <div class="info-icon-wrapper">
+                                    <span class="info-icon">📍</span>
+                                </div>
+                                <div class="info-text">
+                                    <h4>Location</h4>
+                                    <p>Netherlands</p>
+                                    <p>Available for remote work</small>
+                                </div>
+                            </div>
+                            
+                            <!-- Social Info -->
+                            <div class="info-item">
+                                <div class="info-icon-wrapper">
+                                    <span class="info-icon">🌐</span>
+                                </div>
+                                <div class="info-text">
+                                    <h4>Social</h4>
+                                    <div class="social-links">
+                                        <a href="#" class="social-link">LinkedIn</a>
+                                        <a href="#" class="social-link">GitHub</a>
+                                        <a href="#" class="social-link">Twitter</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
